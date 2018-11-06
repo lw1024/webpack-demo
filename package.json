@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Webpack学习示例",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
   "devDependencies": {
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
@@ -17,7 +19,7 @@
   },
   "keywords": [],
   "author": "luwei",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lw1024/webpack-demo/issues"
   },
