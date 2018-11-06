@@ -1,0 +1,25 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "Webpack学习示例",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lw1024/webpack-demo.git"
+  },
+  "keywords": [],
+  "author": "luwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lw1024/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/lw1024/webpack-demo#readme"
+}
