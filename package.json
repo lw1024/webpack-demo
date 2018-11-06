@@ -2,7 +2,7 @@
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "Webpack学习示例",
-  "main": "index.js",
+  "private": true,
   "dependencies": {},
   "devDependencies": {
     "webpack": "^4.25.1",
