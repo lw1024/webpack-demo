@@ -330,4 +330,4 @@ ASALocalRun/
 .mfractor/
 .DS_Store
 
-/dist/*
+dist/
