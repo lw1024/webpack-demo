@@ -4,7 +4,10 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    main: './src/index.js',
+    vendor: [
+      'lodash'
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
@@ -12,6 +15,18 @@ module.exports = {
       title: 'Caching'
     })
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: "vendor"
+        },
+        manifest: {
+          name: "manifest"
+        },
+      }
+    }
+  },
   output: {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
