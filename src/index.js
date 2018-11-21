@@ -1,13 +1,10 @@
-function getComponent() {
+async function getComponent() {
+  var element = document.createElement('div');
+  const _ = await import( /* webpackChunkName: "lodash" */ 'lodash');
 
-  return import( /* webpackChunkName: "lodash" */ 'lodash').then(_ => {
-    var element = document.createElement('div');
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    return element;
-
-  }).catch(error => 'An error occurred while loading the component');
+  return element;
 }
 
 getComponent().then(component => {
