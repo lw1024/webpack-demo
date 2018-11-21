@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -11,6 +12,17 @@ module.exports = {
       title: 'Code Splitting'
     })
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          name: "common",
+          chunks: "initial",
+          minChunks: 2
+        }
+      }
+    }
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
