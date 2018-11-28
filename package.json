@@ -7,6 +7,10 @@
     "lodash": "^4.17.11"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "exports-loader": "^0.7.0",
+    "imports-loader": "^0.8.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
   },
