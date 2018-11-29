@@ -1,6 +1,21 @@
 import _ from 'lodash';
 import printMe from './print.js';
 
+console.log('Start...');
+if ('serviceWorker' in navigator) {
+  console.log('\'serviceWorker\' in navigator')
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
+} else {
+  console.log('navigator: ', navigator)
+}
+
 function component() {
   var element = document.createElement('div');
   var btn = document.createElement('button');
